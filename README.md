@@ -15,6 +15,8 @@ You will need to modifiy your php.ini for points 1 & 2.  Points 3 & 4 are done o
 
 #Simple Example
 <pre>
+include('sparkpost-api.php');
+
 $mail = new sparkPostApi('https://api.sparkpost.com/api/v1/transmissions','< YOUR API KEY >');
 $mail-> from(array(
   'email' => 'validated@yourdomain.com',
