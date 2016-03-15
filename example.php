@@ -16,12 +16,18 @@
 	$mail->setReplyTo('youremail@yourdomain.com');
 	
 	/* CC emails as array same as "seTo"
-	//$mail->setCc(array('mail@brainstemstudio.com','mail.brainstemstudio@gmail.com'));
+	//$mail->setCc(array('person1@yourdomain.com','person2@yourdomain.com'));
 
 	/* BCC emails as array same as "seTo" */
-	//$mail->setBcc(array('mail@brainstemstudio.com','mail.brainstemstudio@gmail.com'));
-	
-	$mail->send();
+	//$mail->setBcc(array('person1@yourdomain.com','person2@yourdomain.com'));
+	try{
+		$mail->send();
+		print "Message Sent";
+	} 
+	catch (Exception $e) {
+		print $e;	
+	}
+
 
 	$mail->close();
 
