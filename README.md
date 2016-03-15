@@ -29,7 +29,7 @@ $mail-> html('
 	Mandrill is now a paid service, let\'s move to sparkpost!
 ');
 $mail-> setTo(array('person1@yourdomain.com','person2@yourdomain.com'));
-$mail- >setReplyTo('youremail@yourdomain.com');
+$mail-> setReplyTo('youremail@yourdomain.com');
 
 try{
 	$mail->send();
