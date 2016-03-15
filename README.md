@@ -2,7 +2,7 @@
 Use sparkpost CURL with PHP
 
 # Why
-I couldn't be bothered working with SparkPosts PHP composer example and needed something a light and modifiable. A simple curl example was not avaialbe in PHP, so one was built and one was shared.
+I couldn't be bothered working with SparkPosts PHP composer example and needed something light and modifiable. A simple curl example was not avaialbe in PHP, so one was built and one was shared.
 
 # Requirements
 1. openssl.cafile value 'openssl.cafile= "ca-bundle.crt"' you can grab a bundle here https://raw.githubusercontent.com/bagder/ca-bundle/master/ca-bundle.crt
