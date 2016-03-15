@@ -105,21 +105,22 @@
 			
 			$result = json_decode(curl_exec($this->curl));
 			
+			
+			
 			if (!isset($result)):
 				
 				throw new Exception('ERROR: CURL WAS NULL');
-				//exit();
+				
 			
-			endif;
-			
-			if (isset($result->errors)):
+			elseif (isset($result->errors)):
 				foreach($result->errors as $error){
 					
 					throw new Exception($error->code.':'.$error->message.' | '.$error->description);
 						
 				}
-				
-				
+			
+			else:
+				return true;
 			endif;
 			
 			
