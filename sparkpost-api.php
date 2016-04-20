@@ -36,6 +36,22 @@
 			$this->msg['content']['subject'] = $subject;
 			
 		}
+
+		public function template($template_ID,$data=array()){
+			
+			$this->msg['content']['template_id'] = $template_ID;
+			
+			if (count($data)>1):
+				
+				$this->msg['substitution_data'] = $data;
+				
+			endif;
+			
+			
+			
+			
+		}
+
 		public function html($html){
 			
 			$this->msg['content']['html'] = $html;
@@ -89,6 +105,7 @@
 				array_push($this->msg['recipients'],array('address' => $email));
 					
 			}
+			
 			
 			
 			$this->curl = curl_init();
